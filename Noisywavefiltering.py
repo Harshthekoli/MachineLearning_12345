@@ -4,7 +4,7 @@ from scipy.signal import butter, lfilter
 
 # Generate signal
 t = np.linspace(0, 1, 500, endpoint=False)
-signal = np.sin(2 * np.pi * 5 * t) + np.random.randn(500) * 0.5
+signal = np.sin(2 * np.pi * 5 * t)+ 0.5 * np.random.normal(size=t.shape) 
 
 # Butterworth low-pass filter
 def butter_lowpass(cutoff, fs, order=5):
